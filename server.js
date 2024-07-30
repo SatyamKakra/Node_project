@@ -5,6 +5,7 @@ require('dotenv').config();
 const passport = require('./auth');
 
 
+
 const app = express()
 
 const bodyParser = require('body-parser');
@@ -34,7 +35,7 @@ const personRoutes = require('./routes/personRoutes');
 const menuRoutes = require('./routes/menuItemRoutes');
 
 // use the routers
-app.use('/', localAuthMiddleware, personRoutes);
+app.use('/', personRoutes);
 app.use('/', menuRoutes);
 
 
